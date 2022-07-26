@@ -1,0 +1,56 @@
+{
+  "name": "vue-interface",
+  "author": {
+    "name": "TheRealMkadmi"
+  },
+  "version": "0.5.0",
+  "scripts": {
+    "serve": "vue-cli-service build --target lib --name=VueInterface ./src/install.js --watch",
+    "build": "vue-cli-service build --target lib --name=VueInterface ./src/install.js",
+    "lint": "vue-cli-service lint",
+    "dev": "npm run serve",
+    "fix": "vue-cli-service lint --fix",
+    "pre-release": "npm run build; git add . -A; git commit -m 'pre-release commit'",
+    "release-patch": "npm run pre-release && npm version patch && npm run release;",
+    "release-minor": "npm run pre-release && npm version minor && npm run release;",
+    "release-major": "npm run pre-release && npm version major && npm run release;",
+    "release": "npm publish; git add . -A; git commit; git push --tags origin",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-regular-svg-icons": "^5.13.0",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/vue-fontawesome": "^0.1.9",
+    "animate.css": "^3.7.2",
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.2.3",
+    "@vue/cli-plugin-eslint": "^4.2.3",
+    "@vue/cli-plugin-unit-jest": "^4.2.3",
+    "@vue/cli-service": "^4.2.3",
+    "@vue/test-utils": "1.0.0-beta.32",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.2.6",
+    "eslint": "^6.3.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.2.2",
+    "html-beautify-webpack-plugin": "^1.0.5",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^8.0.0",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10",
+    "webpack-manifest-plugin": "^2.2.0"
+  },
+  "main": "./src/index.js",
+  "styles": "./dist/vue-interface.css"
+}
