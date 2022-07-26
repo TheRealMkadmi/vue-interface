@@ -180,5 +180,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~animate.css";
+@import "~/animate.css/animate.css";
 </style>

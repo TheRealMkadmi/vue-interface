@@ -1,9 +1,9 @@
 {
-  "name": "vue-interface",
+  "name": "@therealmkadmi/vue-interface",
   "author": {
     "name": "TheRealMkadmi"
   },
-  "version": "0.5.0",
+  "version": "0.5.1",
   "scripts": {
     "serve": "vue-cli-service build --target lib --name=VueInterface ./src/install.js --watch",
     "build": "vue-cli-service build --target lib --name=VueInterface ./src/install.js",
